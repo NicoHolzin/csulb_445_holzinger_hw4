@@ -22,3 +22,41 @@
 // Input: Word (given above)
 // Return (a Boolean): True/False or 0/1
 // b. Program is case insensitive
+
+function vowelsNb(word) {
+  word=word.toLowerCase();
+  let arrayWord = Array.from(word);
+  let vowelsNb = 0;
+  let vowelsArray=["a","e","i","o","u","y"];
+  for (const letter of arrayWord) {
+    if (vowelsArray.includes(letter)) {
+      vowelsNb++;
+    }
+  }
+  return vowelsNb;
+}
+
+function palindromeTest(word){
+  word=word.toLowerCase();
+  let palindromeWord="";
+  for (let index = 0; index < word.length; index++) {
+    palindromeWord+=word[word.length-1-index];
+  }
+  if (palindromeWord===word) {
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+function exercice7(word){
+  if (palindromeTest(word)){
+    console.log(`"${word}" contains ${vowelsNb(word)} vowels and is a palindrome`)
+  }
+  else {
+    console.log(`"${word}" contains ${vowelsNb(word)} vowels and is not a palindrome`)
+  }
+}
+
+exercice7(prompt("Type a word"));
