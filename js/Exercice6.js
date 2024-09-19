@@ -16,4 +16,12 @@
 // Input: Stop
 // Output (below or similar):
 // No words to display, Stop was the first word entered.
-// A. Asher IS445/545 S01 – Fall 2024 Page 6 of 11
+
+let words = [];
+let inputword;
+
+while ((inputword = prompt("Type a word").toLowerCase())!== "stop") {
+  words.push(inputword)
+}
+
+for (const word of words) {console.log(word);}
