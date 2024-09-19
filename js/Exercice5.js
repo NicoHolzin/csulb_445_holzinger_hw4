@@ -21,4 +21,16 @@
 // lastElement: { name: 'Alice', score: 98 },
 // length: 7
 // }
-// A. Asher IS445/545 S01 – Fall 2024 Page 5 of 11
+
+const values = ["a", 2, "Hello", 6, [4, 5], "bye", {name: "Alice", score: 98}];
+
+function valuesProprieties(values){
+  const valuesProprieties = {
+    firstElement: values[0],
+    lastElement: values[values.length-1],
+    length:values.length
+  }
+  return valuesProprieties;
+}
+
+console.log(valuesProprieties(values));
